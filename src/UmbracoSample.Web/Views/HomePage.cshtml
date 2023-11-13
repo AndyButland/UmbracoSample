@@ -1,0 +1,15 @@
+﻿@using UmbracoSample.Core.Models.ViewModels
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<HomePageViewModel>
+
+@{
+    Layout = "_Layout.cshtml";
+}
+
+<div>
+    <h1>@Model.Heading</h1>
+
+    @if (Model.HasWeatherSummary)
+    {
+        <p>Current weather is: <strong>@Model.WeatherSummary</strong></p>
+    }
+</div>

@@ -1,0 +1,10 @@
+﻿@using UmbracoSample.Core.Models.ViewModels
+@model BreadcrumbViewModel
+<div>
+    @foreach (var link in Model.Links)
+    {
+        <a href="@link.Url">@link.Text</a>
+        <span>&gt;</span>
+    }
+    <span>@Model.CurrentPageName</span>
+</div>

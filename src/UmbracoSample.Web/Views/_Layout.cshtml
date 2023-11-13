@@ -1,0 +1,22 @@
+﻿@using UmbracoSample.Core.Models.ViewModels
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<PageViewModelBase>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>@Model.PageTitle</title>
+    <meta name="description" content="@Model.MetaDescription"></meta>
+    <meta name="keywords" content="@Model.MetaKeywords"></meta>
+    <style type="text/css">
+        nav a.active { font-weight: bold }
+    </style>
+</head>
+
+<body>
+    @(await Component.InvokeAsync("TopNavigation"))
+    @(await Component.InvokeAsync("Breadcrumb"))
+    @RenderBody()
+</body>
+
+</html>

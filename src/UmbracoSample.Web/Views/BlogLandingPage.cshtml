@@ -1,0 +1,16 @@
+﻿@using UmbracoSample.Core.Models.ViewModels
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlogLandingPageViewModel>
+
+@{
+    Layout = "_Layout.cshtml";
+}
+
+<div>
+    <h1>@Model.Heading</h1>
+    <h2>@Model.Subheading</h2>
+
+    @foreach (var article in Model.MostRecentArticles)
+    {
+        <div><a href="@article.Url">@article.Heading</a></div>
+    }
+</div>

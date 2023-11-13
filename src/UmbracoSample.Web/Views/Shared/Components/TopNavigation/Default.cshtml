@@ -1,0 +1,10 @@
+﻿@using UmbracoSample.Core.Models.ViewModels
+@model TopNavigationViewModel
+<nav>
+    <ul>
+        @foreach (var link in Model.Links)
+        {
+            <li><a href="@link.Url" class="@(link.Active ? "active": string.Empty)">@link.Text</a></li>
+        }
+    </ul>
+</nav>
